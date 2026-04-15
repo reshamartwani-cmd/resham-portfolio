@@ -1,62 +1,710 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resham Artwani | Customer Success Manager</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resham Artwani – Customer Success Manager, Happiness Engineer & Technical Support Specialist with 4+ years in SaaS, automation platforms, REST APIs, onboarding, churn reduction, and revenue expansion. Open to remote roles." />
+  <meta name="keywords" content="Customer Success Manager, Happiness Engineer, Technical Support Engineer, Customer Support Manager, SaaS, Automation Platform, REST API, Webhooks, Onboarding, Churn Reduction, Revenue Expansion, CRM, Zendesk, Freshdesk, Postman, B2B SaaS, Technical Account Management, Remote Customer Success, Pool Account Management, Scaled Customer Success" />
+  <title>Resham Artwani | Customer Success · Happiness Engineer · Technical Support – SaaS</title>
+
+  <!-- ATS-readable: all content in plain HTML, no canvas/svg text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --ink: #0d0d0d;
+      --paper: #f5f1eb;
+      --accent: #c84b2f;
+      --accent2: #2e5fa3;
+      --muted: #6b6560;
+      --rule: #d4cfc8;
+      --highlight: #fff3cd;
+      --card: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f9fc;
-      color: #333;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
+
+    /* ── NOISE TEXTURE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
     }
-    h1 { color: #0b57d0; }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+      position: relative; z-index: 1;
     }
-    .tagline {
-      font-weight: bold;
-      color: #555;
+
+    /* ── HEADER ── */
+    header {
+      border-top: 4px solid var(--accent);
+      padding-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: end;
     }
-    .section {
-      margin-bottom: 25px;
+
+    .name-block h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+    }
+
+    .name-block h1 span {
+      color: var(--accent);
+    }
+
+    .name-block .tagline {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-block {
+      text-align: right;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .contact-block a {
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .contact-block a:hover { border-color: var(--accent2); }
+
+    .availability-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      margin-top: 0.5rem;
+    }
+
+    /* ── SECTION ── */
+    section { margin-bottom: 2.8rem; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── SUMMARY ── */
+    .summary-box {
+      background: var(--card);
+      border-left: 3px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      font-size: 0.95rem;
+      color: #2a2a2a;
+      box-shadow: 4px 4px 0 var(--rule);
+    }
+
+    /* ── SKILLS GRID ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 1rem 1.1rem;
+      box-shadow: 3px 3px 0 var(--rule);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .skill-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 var(--rule);
+    }
+
+    .skill-card .sk-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card .sk-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      font-size: 0.73rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 2px;
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+    }
+
+    .tag.star {
+      background: #fff3e0;
+      border-color: #f0a500;
+      color: #7a4f00;
+      font-weight: 500;
+    }
+
+    /* ── EXPERIENCE ── */
+    .job {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      margin-bottom: 1.2rem;
+      box-shadow: 3px 3px 0 var(--rule);
+      overflow: hidden;
+    }
+
+    .job-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 1rem;
+      padding: 1.1rem 1.3rem 0.8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .job-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+
+    .job-company {
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--accent2);
+      margin-top: 0.2rem;
+    }
+
+    .job-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .job-body {
+      padding: 1rem 1.3rem;
+    }
+
+    .job-body ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .job-body ul li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+      font-size: 0.88rem;
+      color: #2a2a2a;
+    }
+
+    .job-body ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+      top: 0.05rem;
+    }
+
+    /* ── LEARNER BADGE SECTION ── */
+    .learner-card {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a3350 100%);
+      color: #e8f0fe;
+      padding: 1.5rem 1.8rem;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 4px 4px 0 #bbb;
+    }
+
+    .learner-card::before {
+      content: '⚡';
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 4rem;
+      opacity: 0.08;
+    }
+
+    .learner-card .lc-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7eb8f7;
+      margin-bottom: 0.5rem;
+    }
+
+    .learner-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+      color: #fff;
+    }
+
+    .learner-card p {
+      font-size: 0.87rem;
+      color: #b8cfe8;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .llm-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .llm-tag {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #d0e8ff;
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .edu-item {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 0.9rem 1rem;
+      box-shadow: 2px 2px 0 var(--rule);
+    }
+
+    .edu-degree {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--ink);
+    }
+
+    .edu-school {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .edu-year {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-top: 0.3rem;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      color: #2a2a2a;
+    }
+
+    .cert-item::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    footer .f-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent2);
+      font-size: 0.8rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ── PRINT / ATS ── */
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      body::before { display: none; }
+      .job, .skill-card, .edu-item { box-shadow: none; border: 1px solid #ccc; }
+      .learner-card { background: #f0f4ff; color: #000; }
+      header { border-top: 2px solid #c84b2f; }
+      .availability-badge { display: none; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-wrap > * {
+      animation: fadeUp 0.5s ease both;
+    }
+    .page-wrap > *:nth-child(1) { animation-delay: 0s; }
+    .page-wrap > *:nth-child(2) { animation-delay: 0.07s; }
+    .page-wrap > *:nth-child(3) { animation-delay: 0.14s; }
+    .page-wrap > *:nth-child(4) { animation-delay: 0.21s; }
+    .page-wrap > *:nth-child(5) { animation-delay: 0.28s; }
+    .page-wrap > *:nth-child(6) { animation-delay: 0.35s; }
+    .page-wrap > *:nth-child(7) { animation-delay: 0.42s; }
+    .page-wrap > *:nth-child(8) { animation-delay: 0.49s; }
+
+    @media (max-width: 600px) {
+      header { grid-template-columns: 1fr; }
+      .contact-block { text-align: left; }
+      .job-header { grid-template-columns: 1fr; }
+      .job-date { text-align: left; }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
+<div class="page-wrap">
 
-    <h1>Resham Artwani</h1>
-    <p class="tagline">Customer Success Manager | SaaS | Automation</p>
+  <!-- HEADER -->
+  <header>
+    <div class="name-block">
+      <h1>Resham <span>Artwani</span></h1>
+      <p class="tagline">Customer Success · Happiness Engineer · Technical Support &nbsp;·&nbsp; SaaS &amp; Automation</p>
+    </div>
+    <div class="contact-block">
+      <div>+91 82188 78357</div>
+      <div><a href="https://wa.me/918989017742" target="_blank" rel="noopener">+91 89890 17742 (WhatsApp ✓)</a></div>
+      <div><a href="mailto:resham.artwani@gmail.com">resham.artwani@gmail.com</a></div>
+      <div><a href="https://linkedin.com/in/resham-artwani" target="_blank" rel="noopener">linkedin.com/in/resham-artwani</a></div>
+      <div>Bhopal, India</div>
+      <div class="availability-badge">Open to Remote – EST / PST</div>
+    </div>
+  </header>
 
-    <div class="section">
-      <h2>About Me</h2>
+  <!-- PROFESSIONAL SUMMARY -->
+  <section>
+    <div class="section-label">Professional Summary</div>
+    <div class="summary-box">
+      Customer Success Manager with <strong>4+ years of post-sales ownership</strong> across a high-volume SaaS automation platform. Operated in a <strong>scaled, pool-based success model</strong> — owning the full success lifecycle across all paid accounts simultaneously, not a single named portfolio. This means every customer interaction, every churn signal, every onboarding touchpoint, and every integration issue was my responsibility at scale. Strong technical depth in REST APIs, webhooks, and third-party integrations makes me an equally strong fit for <strong>Customer Support, Happiness Engineer, and Technical Support</strong> roles. Relentless self-learner who uses AI and LLM tools to ship faster, communicate clearer, and stay ahead of the product.
+    </div>
+  </section>
+
+  <!-- CORE SKILLS -->
+  <section>
+    <div class="section-label">Core Competencies</div>
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <div class="sk-title">Customer Success</div>
+        <div class="sk-tags">
+          <span class="tag star">Onboarding</span>
+          <span class="tag star">Churn Prevention</span>
+          <span class="tag">Activation</span>
+          <span class="tag">Retention</span>
+          <span class="tag">Renewals</span>
+          <span class="tag">MBRs / QBRs</span>
+          <span class="tag">Account Growth</span>
+          <span class="tag">Revenue Expansion</span>
+          <span class="tag">Voice of Customer</span>
+          <span class="tag">Customer Journey Mapping</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-title">API &amp; Technical Skills</div>
+        <div class="sk-tags">
+          <span class="tag star">REST APIs</span>
+          <span class="tag star">Webhooks</span>
+          <span class="tag">Postman</span>
+          <span class="tag">JSON</span>
+          <span class="tag">HTTP Status Codes</span>
+          <span class="tag">Webhook.site</span>
+          <span class="tag">OAuth</span>
+          <span class="tag">Rate Limits</span>
+          <span class="tag">Third-party Integrations</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-title">CRM &amp; Support Platforms</div>
+        <div class="sk-tags">
+          <span class="tag star">Zendesk</span>
+          <span class="tag star">Freshdesk</span>
+          <span class="tag">Zoho CRM</span>
+          <span class="tag">ZenForo</span>
+          <span class="tag">Frappe</span>
+          <span class="tag">Sprinklr</span>
+          <span class="tag">OneDirect</span>
+          <span class="tag">HubSpot</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-title">Process &amp; Leadership</div>
+        <div class="sk-tags">
+          <span class="tag">SOP Design</span>
+          <span class="tag">KPI Tracking</span>
+          <span class="tag">Escalation Management</span>
+          <span class="tag">Team Mentoring</span>
+          <span class="tag">QA &amp; CSAT</span>
+          <span class="tag">Feedback Loops</span>
+          <span class="tag">Knowledge Base</span>
+          <span class="tag">Workflow Automation</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-title">Product &amp; Growth</div>
+        <div class="sk-tags">
+          <span class="tag">Product Feedback</span>
+          <span class="tag">Feature Validation</span>
+          <span class="tag">Competitive Analysis</span>
+          <span class="tag">User Research</span>
+          <span class="tag">Staging Testing</span>
+          <span class="tag">Demo Videos</span>
+          <span class="tag">Self-Serve Content</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-title">Digital &amp; Marketing</div>
+        <div class="sk-tags">
+          <span class="tag">Email Marketing</span>
+          <span class="tag">Digital Marketing</span>
+          <span class="tag">G Suite</span>
+          <span class="tag">Docs / Sheets / Slides</span>
+          <span class="tag">SLA Compliance</span>
+          <span class="tag">CRM Records</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI LEARNER SECTION -->
+  <section>
+    <div class="section-label">AI-Powered Learner &amp; Builder</div>
+    <div class="learner-card">
+      <div class="lc-label">Continuous Learning &amp; LLM Tooling</div>
+      <h3>I learn fast — and I build with AI.</h3>
       <p>
-        Customer Success Manager with 4+ years of experience in SaaS automation platforms.
-        Skilled in onboarding, retention, API integrations, and workflow automation.
+        In an industry where products evolve weekly, I treat learning as a core job function. I actively use large language models (Claude, ChatGPT, Gemini) as a co-pilot — to break down technical documentation, prototype internal automation tools, draft knowledge base articles, debug API payloads, and upskill on new SaaS products rapidly. This lets me deliver faster customer value, reduce support ticket volume, and stay ahead of the product roadmap without waiting for formal training.
       </p>
+      <div class="llm-tags">
+        <span class="llm-tag">Claude AI</span>
+        <span class="llm-tag">ChatGPT</span>
+        <span class="llm-tag">Gemini</span>
+        <span class="llm-tag">Prompt Engineering</span>
+        <span class="llm-tag">AI-assisted Docs</span>
+        <span class="llm-tag">Automation Prototyping</span>
+        <span class="llm-tag">Rapid Product Learning</span>
+        <span class="llm-tag">LLM for Customer Success</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="section-label">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Customer Success Manager / Support Lead / Happiness Engineer</div>
+          <div class="job-company">Pabbly.com — Magnet Brains Software Technology Pvt. Ltd.</div>
+        </div>
+        <div class="job-date">April 2022 – Present<br><span style="color:var(--accent);font-weight:600;">3+ years</span></div>
+      </div>
+      <div class="job-body">
+        <ul>
+          <li>Operated in a <strong>scaled pool-based success model</strong> — responsible for the full post-sales lifecycle across <strong>all paid accounts simultaneously</strong> (onboarding, activation, adoption, retention, renewals, and revenue protection), not a single named portfolio. Every paid customer was my customer.</li>
+          <li>Built the <strong>customer onboarding program from scratch</strong>, establishing activation milestones and workflow setup guides that dramatically reduced time-to-value for new users.</li>
+          <li>Used data and account health signals to identify at-risk customers early, driving proactive <strong>retention interventions</strong> and improving overall customer satisfaction (CSAT).</li>
+          <li>Served as the primary <strong>Voice of the Customer</strong>, translating user pain points and feature requests into actionable product insights for engineering and product teams.</li>
+          <li>Established an end-to-end <strong>product feedback loop</strong> — capturing feature requests, conducting competitive analysis, validating feasibility with engineering, and overseeing staging and production testing before release.</li>
+          <li>Developed a <strong>50+ article self-serve knowledge base</strong> (ZenForo Forums) covering integrations, API usage, and workflow troubleshooting — significantly reducing repetitive support tickets.</li>
+          <li>Leveraged <strong>Postman</strong> to test REST APIs, debug endpoints, validate JSON payloads, HTTP headers, and verify webhook responses; resolved complex technical issues beyond frontline support.</li>
+          <li>Assisted customers with <strong>custom third-party integrations</strong> by analyzing API documentation and ensuring correct payload structure, authentication, and endpoint configuration.</li>
+          <li>Designed and implemented <strong>internal automation workflows</strong> triggered by payment events to eliminate manual follow-ups and streamline CS operations.</li>
+          <li>Established SOPs and KPIs for a team of <strong>6–10 support agents</strong>, including escalation protocols and quality benchmarks — improving team consistency and efficiency.</li>
+          <li>Trained and mentored support agents on <strong>API fundamentals, webhook debugging, and automation best practices</strong>, raising overall technical capability of the team.</li>
+          <li>Created <strong>product demo videos</strong> for customer onboarding and internal training, improving product understanding and adoption rates.</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>Experience</h2>
-      <p><strong>Pabbly</strong> – Customer Success Manager</p>
-      <p>Handled onboarding, API integrations, automation workflows, and retention strategies.</p>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Senior ORM Associate</div>
+          <div class="job-company">boAt — Imagine Marketing India Pvt. Ltd.</div>
+        </div>
+        <div class="job-date">Sept 2020 – March 2022</div>
+      </div>
+      <div class="job-body">
+        <ul>
+          <li>Led customer support team operations — managed task assignment, <strong>quality assurance, and SLA compliance</strong> across email and social media channels (Sprinklr, OneDirect).</li>
+          <li>Acted as escalation liaison between customers, fulfilment, and replacement teams to ensure seamless resolution of complex issues.</li>
+          <li>Analysed customer feedback and recurring escalations to deliver <strong>process improvement recommendations</strong>, reducing repeat contacts.</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <p>Customer Success | APIs | Webhooks | Automation | SaaS</p>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Admission Counsellor</div>
+          <div class="job-company">Radcliffe School</div>
+        </div>
+        <div class="job-date">Sept 2019 – July 2020</div>
+      </div>
+      <div class="job-body">
+        <ul>
+          <li>Managed walk-in inquiries and cold-calling for <strong>lead generation</strong>; maintained detailed CRM records for follow-up tracking and relationship management.</li>
+        </ul>
+      </div>
     </div>
 
-  </div>
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">R&amp;D Intern</div>
+          <div class="job-company">Abellon Clean Energy</div>
+        </div>
+        <div class="job-date">May 2017 – July 2017</div>
+      </div>
+      <div class="job-body">
+        <ul>
+          <li>Collaborated with a US–India consortium on sustainable bio-fuel system development; built econometric models to assess crop viability.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <div class="section-label">Education</div>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div class="edu-degree">Advanced Certificate – Digital Marketing &amp; Communication</div>
+        <div class="edu-school">MICA | UpGrad</div>
+        <div class="edu-year">2024 – 2025</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">B.Ed–M.Ed Integrated</div>
+        <div class="edu-school">Maharaja College, Ujjain</div>
+        <div class="edu-year">2019 – 2023</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">MA – Economics (Energy Economics)</div>
+        <div class="edu-school">UPES, Dehradun</div>
+        <div class="edu-year">2016 – 2018</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">BA – Economics Honours + Psychology</div>
+        <div class="edu-school">IEHE, Bhopal</div>
+        <div class="edu-year">2013 – 2016</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section>
+    <div class="section-label">Certifications</div>
+    <div class="cert-list">
+      <div class="cert-item">Email Marketing Certified – HubSpot Academy (Dec 2022)</div>
+      <div class="cert-item">Email Marketing Certification – SendinBlue / Brevo Academy (Dec 2022)</div>
+      <div class="cert-item">12-in-1 Digital Marketing Course – Rob Percival &amp; Darah Walsh (May 2020)</div>
+      <div class="cert-item">Working with Advanced Excel 2013 – NIIT (Jan 2017)</div>
+      <div class="cert-item">Entrepreneurship Development Program on Solar Energy – NIESBUD (Mar 2017)</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-note">
+      Resham Artwani · Customer Success Manager · resham.artwani@gmail.com
+    </div>
+    <a href="https://linkedin.com/in/resham-artwani" target="_blank" rel="noopener">→ Connect on LinkedIn</a>
+  </footer>
+
+</div>
 </body>
 </html>
