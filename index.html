@@ -179,15 +179,15 @@
 
     /* ── STATS BAR ── */
     .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 56px;
-    }
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 56px;
+}
     .stat {
       background: var(--surface);
       padding: 24px 28px;
@@ -525,10 +525,10 @@
       </a>
       <span class="contact-item"><span class="dot"></span> Bhopal, India</span>
     </div>
-
-   <div class="availability">
-  <span class="pulse"></span>
-  Open to Remote · IST / EST / PST
+    <div class="contact-row" style="margin-top: 12px;">
+  <span class="contact-item">
+    <span class="dot"></span> Open to Remote · IST / EST / PST
+  </span>
 </div>
   </header>
 
