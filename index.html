@@ -1,25 +1,203 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resham Portfolio</title>
-    <style>
-        /* Add missing .availability selector */
-        .availability {
-            display: block;
-        }
-        /* Other styles */
-        .another-class {
-            color: red;
-        }
-        /* Existing styles here */
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resham Artwani – Technical Support & Customer Success</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --surface2: #f0f2f5;
+      --border: #e2e6ed;
+      --accent: #0d9e6a;
+      --accent2: #1a7fd4;
+      --accent3: #d07a1a;
+      --text: #1a1e2a;
+      --muted: #6b7490;
+      --tag-bg: rgba(13,158,106,0.07);
+      --tag-border: rgba(13,158,106,0.22);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(13,158,106,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13,158,106,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 32px 96px;
+    }
+
+    header {
+      margin-bottom: 56px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 64px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* ✅ FIXED STATS GRID */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 40px;
+      margin-bottom: 56px;
+    }
+
+    .stat {
+      background: var(--surface);
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      color: var(--accent);
+    }
+
+    .stat-number.blue { color: var(--accent2); }
+    .stat-number.orange { color: var(--accent3); }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+    }
+
+  </style>
+
 </head>
+
 <body>
-    <h1>Welcome to Resham's Portfolio</h1>
-    <div class="stats-bar" style="display: grid; grid-template-columns: repeat(6, 1fr);">
-        <!-- Other content -->
-    </div>
+<div class="container">
+
+<header>
+  <div class="header-label">Resume · Technical Support & Customer Success</div>
+  <h1>Resham Artwani</h1>
+  <div class="subtitle">SaaS · iPaaS · API Integrations · 4+ Years</div>
+
+  <div class="contact-row">
+    <span class="contact-item"><span class="dot"></span> resham.artwani@gmail.com</span>
+    <span class="contact-item"><span class="dot"></span> +91 8218878357</span>
+    <span class="contact-item"><span class="dot"></span> +91 8989017742</span>
+    <span class="contact-item"><span class="dot"></span> linkedin.com/in/resham-artwani</span>
+    <span class="contact-item"><span class="dot"></span> Bhopal, India</span>
+  </div>
+
+  <!-- ✅ FIXED REMOTE TEXT -->
+
+  <div class="contact-row" style="margin-top: 12px;">
+    <span class="contact-item">
+      <span class="dot"></span> Open to Remote · IST / EST / PST
+    </span>
+  </div>
+
+</header>
+
+<!-- STATS -->
+
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-number">97%</div>
+    <div class="stat-label">CSAT Score</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">90%</div>
+    <div class="stat-label">NPS Maintained</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number blue">40K+</div>
+    <div class="stat-label">Paid Users Served</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number orange">&lt;30m</div>
+    <div class="stat-label">Avg First Response</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">$21M</div>
+    <div class="stat-label">ARR Account Pool</div>
+  </div>
+
+  <!-- ✅ NOW ALIGNED -->
+
+  <div class="stat">
+    <div class="stat-number blue">4+</div>
+    <div class="stat-label">Years Experience</div>
+  </div>
+</div>
+
+</div>
 </body>
 </html>
