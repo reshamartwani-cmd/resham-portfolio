@@ -177,8 +177,7 @@
       50% { opacity: 0.4; transform: scale(0.7); }
     }
 
-    /* ── STATS BAR ── */
-    .stats-bar {
+   .stats-bar {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1px;
@@ -186,6 +185,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
+  margin-top: 8px;        /* 👈 ADD THIS */
   margin-bottom: 56px;
 }
     .stat {
